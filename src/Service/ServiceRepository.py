@@ -10,6 +10,16 @@ class ServiceRepository(IServiceRepo):
         service.title = body['title']
         service.short_description = body['short_description']
         service.long_description = body['long_description']
+
+        service.name = body['name']
+        service.last_name = body['last_name']
+        service.patronymic = body['patronymic']
+        service.data = body['data']
+        service.city = body['city']
+        service.gender = body['gender']
+        service.problem = body['problem']
+        service.exercise = body['exercise']
+
         service.creator_id = g.user_id
         service.save_db()
         return service
@@ -18,6 +28,14 @@ class ServiceRepository(IServiceRepo):
         service.title = body['title']
         service.short_description = body['short_description']
         service.long_description = body['long_description']
+        service.name = body['name']
+        service.last_name = body['last_name']
+        service.patronymic = body['patronymic']
+        service.data = body['data']
+        service.city = body['city']
+        service.gender = body['gender']
+        service.problem = body['problem']
+        service.exercise = body['exercise']
         service.update_db()
 
     def delete(self, service: Service):

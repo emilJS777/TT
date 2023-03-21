@@ -50,6 +50,16 @@ class ServiceService(Service, Repository):
             'long_description': service.long_description,
             'creation_date': service.creation_date.strftime("%Y-%m-%d"),
             'image': self.get_dict_items(service.image) if service.image else None,
+
+            'name': service.name,
+            'last_name': service.last_name,
+            'patronymic': service.patronymic,
+            'data': service.data,
+            'city': service.city,
+            'gender': service.gender,
+            'problem': service.problem,
+            'exercise': service.exercise,
+
             "creator": {
                 "id": service.creator.id,
                 "name": service.creator.name,
@@ -76,6 +86,14 @@ class ServiceService(Service, Repository):
                 'title': service.title,
                 'short_description': service.short_description,
                 'creation_date': service.creation_date.strftime("%Y-%m-%d"),
-                'image': self.get_dict_items(service.image) if service.image else None
+                'image': self.get_dict_items(service.image) if service.image else None,
+                'name': service.name,
+                'last_name': service.last_name,
+                'patronymic': service.patronymic,
+                'data': service.data,
+                'city': service.city,
+                'gender': service.gender,
+                'problem': service.problem,
+                'exercise': service.exercise,
             } for service in services.items]
         })
