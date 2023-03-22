@@ -5,8 +5,8 @@ from datetime import datetime
 
 
 class Service(db.Model, Model):
-    title = db.Column(db.String(50), nullable=False)
-    short_description = db.Column(db.String(400), nullable=False)
+    title = db.Column(db.String(50))
+    short_description = db.Column(db.String(400))
     long_description = db.Column(db.Text)
     image = relationship("Image", uselist=False)
 
