@@ -19,6 +19,7 @@ class ServiceRepository(IServiceRepo):
         service.gender = body['gender']
         service.problem = body['problem']
         service.exercise = body['exercise']
+        service.paid = body['paid']
 
         service.creator_id = g.user_id
         service.save_db()
@@ -36,6 +37,7 @@ class ServiceRepository(IServiceRepo):
         service.gender = body['gender']
         service.problem = body['problem']
         service.exercise = body['exercise']
+        service.paid = body['paid']
         service.update_db()
 
     def delete(self, service: Service):

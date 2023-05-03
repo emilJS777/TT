@@ -23,3 +23,5 @@ class Service(db.Model, Model):
     creator = relationship("User")
     creation_date = db.Column(db.DateTime, default=datetime.utcnow())
 
+    paid = db.Column(db.Boolean, default=False)
+

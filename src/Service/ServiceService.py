@@ -59,6 +59,7 @@ class ServiceService(Service, Repository):
             'gender': service.gender,
             'problem': service.problem,
             'exercise': service.exercise,
+            "paid": service.paid,
 
             "creator": {
                 "id": service.creator.id,
@@ -95,5 +96,6 @@ class ServiceService(Service, Repository):
                 'gender': service.gender,
                 'problem': service.problem,
                 'exercise': service.exercise,
+                "paid": service.paid,
             } for service in services.items]
         })
